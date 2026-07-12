@@ -24,7 +24,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         texeditor.h texeditor.cpp texeditor.ui
-        error.h
+        cutsceneeditor.h cutsceneeditor.cpp cutsceneeditor.ui
+        danformats.h danformats.cpp
+
 
     )
 # Define target properties for Android with Qt 6 as:

@@ -43,8 +43,14 @@ template <> constexpr inline auto TexEditor::qt_create_metaobjectdata<qt_meta_ta
         "",
         "on_actionOpen_triggered",
         "SetImage",
-        "QPixmap",
-        "pPix"
+        "QImage*",
+        "pImg",
+        "QString&",
+        "pFileName",
+        "on_actionSave_triggered",
+        "on_actionSave_png_triggered",
+        "on_sTexType_activated",
+        "index"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -53,8 +59,16 @@ template <> constexpr inline auto TexEditor::qt_create_metaobjectdata<qt_meta_ta
         // Slot 'on_actionOpen_triggered'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'SetImage'
-        QtMocHelpers::SlotData<void(QPixmap)>(4, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 5, 6 },
+        QtMocHelpers::SlotData<void(QImage *, QString &)>(4, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 5, 6 }, { 0x80000000 | 7, 8 },
+        }}),
+        // Slot 'on_actionSave_triggered'
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_actionSave_png_triggered'
+        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_sTexType_activated'
+        QtMocHelpers::SlotData<void(int)>(11, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 12 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -81,7 +95,10 @@ void TexEditor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         switch (_id) {
         case 0: _t->on_actionNew_triggered(); break;
         case 1: _t->on_actionOpen_triggered(); break;
-        case 2: _t->SetImage((*reinterpret_cast<std::add_pointer_t<QPixmap>>(_a[1]))); break;
+        case 2: _t->SetImage((*reinterpret_cast<std::add_pointer_t<QImage*>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString&>>(_a[2]))); break;
+        case 3: _t->on_actionSave_triggered(); break;
+        case 4: _t->on_actionSave_png_triggered(); break;
+        case 5: _t->on_sTexType_activated((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -106,14 +123,14 @@ int TexEditor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 6;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 6;
     }
     return _id;
 }

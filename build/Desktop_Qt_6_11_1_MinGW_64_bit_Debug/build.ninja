@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: DanUtilGUI
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -49,41 +49,61 @@ cmake_ninja_workdir = C$:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit
 
 build cmake_object_order_depends_target_DanUtilGUI: phony || DanUtilGUI_autogen DanUtilGUI_autogen/mocs_compilation.cpp DanUtilGUI_autogen/timestamp DanUtilGUI_autogen_timestamp_deps
 
-build CMakeFiles/DanUtilGUI.dir/DanUtilGUI_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__DanUtilGUI_unscanned_Debug C$:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_DanUtilGUI
-  CONFIG = Debug
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/DanUtilGUI.dir/DanUtilGUI_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__DanUtilGUI_unscanned_Release C$:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_DanUtilGUI
+  CONFIG = Release
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\DanUtilGUI.dir\DanUtilGUI_autogen\mocs_compilation.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/include -isystem C:/Qt/6.11.1/mingw_64/include/QtCore -isystem C:/Qt/6.11.1/mingw_64/include -isystem C:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.11.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.11.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\DanUtilGUI.dir
   OBJECT_FILE_DIR = CMakeFiles\DanUtilGUI.dir\DanUtilGUI_autogen
   TARGET_SUPPORT_DIR = CMakeFiles\DanUtilGUI.dir
 
-build CMakeFiles/DanUtilGUI.dir/main.cpp.obj: CXX_COMPILER__DanUtilGUI_unscanned_Debug C$:/source/DanUtilGUI/main.cpp || cmake_object_order_depends_target_DanUtilGUI
-  CONFIG = Debug
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/DanUtilGUI.dir/main.cpp.obj: CXX_COMPILER__DanUtilGUI_unscanned_Release C$:/source/DanUtilGUI/main.cpp || cmake_object_order_depends_target_DanUtilGUI
+  CONFIG = Release
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\DanUtilGUI.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/include -isystem C:/Qt/6.11.1/mingw_64/include/QtCore -isystem C:/Qt/6.11.1/mingw_64/include -isystem C:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.11.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.11.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\DanUtilGUI.dir
   OBJECT_FILE_DIR = CMakeFiles\DanUtilGUI.dir
   TARGET_SUPPORT_DIR = CMakeFiles\DanUtilGUI.dir
 
-build CMakeFiles/DanUtilGUI.dir/mainwindow.cpp.obj: CXX_COMPILER__DanUtilGUI_unscanned_Debug C$:/source/DanUtilGUI/mainwindow.cpp || cmake_object_order_depends_target_DanUtilGUI
-  CONFIG = Debug
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/DanUtilGUI.dir/mainwindow.cpp.obj: CXX_COMPILER__DanUtilGUI_unscanned_Release C$:/source/DanUtilGUI/mainwindow.cpp || cmake_object_order_depends_target_DanUtilGUI
+  CONFIG = Release
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\DanUtilGUI.dir\mainwindow.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/include -isystem C:/Qt/6.11.1/mingw_64/include/QtCore -isystem C:/Qt/6.11.1/mingw_64/include -isystem C:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.11.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.11.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\DanUtilGUI.dir
   OBJECT_FILE_DIR = CMakeFiles\DanUtilGUI.dir
   TARGET_SUPPORT_DIR = CMakeFiles\DanUtilGUI.dir
 
-build CMakeFiles/DanUtilGUI.dir/texeditor.cpp.obj: CXX_COMPILER__DanUtilGUI_unscanned_Debug C$:/source/DanUtilGUI/texeditor.cpp || cmake_object_order_depends_target_DanUtilGUI
-  CONFIG = Debug
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/DanUtilGUI.dir/texeditor.cpp.obj: CXX_COMPILER__DanUtilGUI_unscanned_Release C$:/source/DanUtilGUI/texeditor.cpp || cmake_object_order_depends_target_DanUtilGUI
+  CONFIG = Release
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\DanUtilGUI.dir\texeditor.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/include -isystem C:/Qt/6.11.1/mingw_64/include/QtCore -isystem C:/Qt/6.11.1/mingw_64/include -isystem C:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.11.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.11.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\DanUtilGUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\DanUtilGUI.dir
+  TARGET_SUPPORT_DIR = CMakeFiles\DanUtilGUI.dir
+
+build CMakeFiles/DanUtilGUI.dir/cutsceneeditor.cpp.obj: CXX_COMPILER__DanUtilGUI_unscanned_Release C$:/source/DanUtilGUI/cutsceneeditor.cpp || cmake_object_order_depends_target_DanUtilGUI
+  CONFIG = Release
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\DanUtilGUI.dir\cutsceneeditor.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/include -isystem C:/Qt/6.11.1/mingw_64/include/QtCore -isystem C:/Qt/6.11.1/mingw_64/include -isystem C:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.11.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.11.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\DanUtilGUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\DanUtilGUI.dir
+  TARGET_SUPPORT_DIR = CMakeFiles\DanUtilGUI.dir
+
+build CMakeFiles/DanUtilGUI.dir/danformats.cpp.obj: CXX_COMPILER__DanUtilGUI_unscanned_Release C$:/source/DanUtilGUI/danformats.cpp || cmake_object_order_depends_target_DanUtilGUI
+  CONFIG = Release
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\DanUtilGUI.dir\danformats.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/include -isystem C:/Qt/6.11.1/mingw_64/include/QtCore -isystem C:/Qt/6.11.1/mingw_64/include -isystem C:/Qt/6.11.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.11.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.11.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\DanUtilGUI.dir
   OBJECT_FILE_DIR = CMakeFiles\DanUtilGUI.dir
@@ -97,9 +117,9 @@ build CMakeFiles/DanUtilGUI.dir/texeditor.cpp.obj: CXX_COMPILER__DanUtilGUI_unsc
 #############################################
 # Link the executable DanUtilGUI.exe
 
-build DanUtilGUI.exe: CXX_EXECUTABLE_LINKER__DanUtilGUI_Debug CMakeFiles/DanUtilGUI.dir/DanUtilGUI_autogen/mocs_compilation.cpp.obj CMakeFiles/DanUtilGUI.dir/main.cpp.obj CMakeFiles/DanUtilGUI.dir/mainwindow.cpp.obj CMakeFiles/DanUtilGUI.dir/texeditor.cpp.obj | C$:/Qt/6.11.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.11.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.11.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.11.1/mingw_64/lib/libQt6EntryPoint.a DanUtilGUI.exe.manifest || DanUtilGUI_autogen DanUtilGUI_autogen_timestamp_deps
-  CONFIG = Debug
-  FLAGS = -g
+build DanUtilGUI.exe: CXX_EXECUTABLE_LINKER__DanUtilGUI_Release CMakeFiles/DanUtilGUI.dir/DanUtilGUI_autogen/mocs_compilation.cpp.obj CMakeFiles/DanUtilGUI.dir/main.cpp.obj CMakeFiles/DanUtilGUI.dir/mainwindow.cpp.obj CMakeFiles/DanUtilGUI.dir/texeditor.cpp.obj CMakeFiles/DanUtilGUI.dir/cutsceneeditor.cpp.obj CMakeFiles/DanUtilGUI.dir/danformats.cpp.obj | C$:/Qt/6.11.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.11.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.11.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.11.1/mingw_64/lib/libQt6EntryPoint.a DanUtilGUI.exe.manifest || DanUtilGUI_autogen DanUtilGUI_autogen_timestamp_deps
+  CONFIG = Release
+  FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.11.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.11.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.11.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.11.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   MANIFESTS = DanUtilGUI.exe.manifest
@@ -187,14 +207,14 @@ build DanUtilGUI_autogen_timestamp_deps: phony
 #############################################
 # Utility command for DanUtilGUI_autogen
 
-build DanUtilGUI_autogen: phony CMakeFiles/DanUtilGUI_autogen DanUtilGUI_autogen/include/ui_mainwindow.h DanUtilGUI_autogen/include/ui_texeditor.h DanUtilGUI_autogen/timestamp DanUtilGUI_autogen/mocs_compilation.cpp DanUtilGUI_autogen_timestamp_deps
+build DanUtilGUI_autogen: phony CMakeFiles/DanUtilGUI_autogen DanUtilGUI_autogen/include/ui_mainwindow.h DanUtilGUI_autogen/include/ui_texeditor.h DanUtilGUI_autogen/include/ui_cutsceneeditor.h DanUtilGUI_autogen/timestamp DanUtilGUI_autogen/mocs_compilation.cpp DanUtilGUI_autogen_timestamp_deps
 
 
 #############################################
 # Custom command for DanUtilGUI_autogen\timestamp
 
 build DanUtilGUI_autogen/timestamp DanUtilGUI_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}DanUtilGUI_autogen/timestamp ${cmake_ninja_workdir}DanUtilGUI_autogen/mocs_compilation.cpp: CUSTOM_COMMAND C$:/Qt/6.11.1/mingw_64/bin/moc.exe C$:/Qt/6.11.1/mingw_64/bin/uic.exe || DanUtilGUI_autogen_timestamp_deps
-  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\source\DanUtilGUI\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug && C:\cmake\bin\cmake.exe -E cmake_autogen C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/DanUtilGUI_autogen.dir/AutogenInfo.json Debug && C:\cmake\bin\cmake.exe -E touch C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/timestamp && C:\cmake\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile C:/source/DanUtilGUI C:/source/DanUtilGUI C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/deps C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/d/d92a40889d146534e6e9ffd44986d249a8c9a8b34491e97ad7399dc761dfbd1f.d"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\source\DanUtilGUI\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug && C:\cmake\bin\cmake.exe -E cmake_autogen C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/DanUtilGUI_autogen.dir/AutogenInfo.json Release && C:\cmake\bin\cmake.exe -E touch C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/timestamp && C:\cmake\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile C:/source/DanUtilGUI C:/source/DanUtilGUI C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/DanUtilGUI_autogen/deps C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/d/d92a40889d146534e6e9ffd44986d249a8c9a8b34491e97ad7399dc761dfbd1f.d"
   DESC = Automatic MOC and UIC for target DanUtilGUI
   depfile = CMakeFiles\d\d92a40889d146534e6e9ffd44986d249a8c9a8b34491e97ad7399dc761dfbd1f.d
   deps = gcc
@@ -204,7 +224,7 @@ build DanUtilGUI_autogen/timestamp DanUtilGUI_autogen/mocs_compilation.cpp | ${c
 #############################################
 # Phony custom command for CMakeFiles\DanUtilGUI_autogen
 
-build CMakeFiles/DanUtilGUI_autogen DanUtilGUI_autogen/include/ui_mainwindow.h DanUtilGUI_autogen/include/ui_texeditor.h | ${cmake_ninja_workdir}CMakeFiles/DanUtilGUI_autogen ${cmake_ninja_workdir}DanUtilGUI_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}DanUtilGUI_autogen/include/ui_texeditor.h: phony DanUtilGUI_autogen/timestamp || DanUtilGUI_autogen_timestamp_deps
+build CMakeFiles/DanUtilGUI_autogen DanUtilGUI_autogen/include/ui_mainwindow.h DanUtilGUI_autogen/include/ui_texeditor.h DanUtilGUI_autogen/include/ui_cutsceneeditor.h | ${cmake_ninja_workdir}CMakeFiles/DanUtilGUI_autogen ${cmake_ninja_workdir}DanUtilGUI_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}DanUtilGUI_autogen/include/ui_texeditor.h ${cmake_ninja_workdir}DanUtilGUI_autogen/include/ui_cutsceneeditor.h: phony DanUtilGUI_autogen/timestamp || DanUtilGUI_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
@@ -242,7 +262,7 @@ build .qtcreator/cmake-helper/maintenance_tool_provider.cmake .qtcreator/cmake-h
 # Clean additional files.
 
 build CMakeFiles/clean.additional: CLEAN_ADDITIONAL
-  CONFIG = Debug
+  CONFIG = Release
 
 
 #############################################

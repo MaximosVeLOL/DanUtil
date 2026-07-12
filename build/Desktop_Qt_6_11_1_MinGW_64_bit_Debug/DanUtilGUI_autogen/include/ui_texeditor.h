@@ -12,13 +12,13 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -30,11 +30,14 @@ public:
     QAction *actionNew;
     QAction *actionOpen;
     QAction *actionSave;
+    QAction *actionSave_png;
     QWidget *centralwidget;
     QGraphicsView *iViewer;
     QFrame *frame;
     QLabel *iInfo;
-    QProgressBar *progressBar;
+    QFrame *frame_2;
+    QComboBox *sTexType;
+    QLabel *sLabel1;
     QMenuBar *menubar;
     QMenu *menuFile;
     QStatusBar *statusbar;
@@ -50,31 +53,40 @@ public:
         actionOpen->setObjectName("actionOpen");
         actionSave = new QAction(TexEditor);
         actionSave->setObjectName("actionSave");
+        actionSave_png = new QAction(TexEditor);
+        actionSave_png->setObjectName("actionSave_png");
         centralwidget = new QWidget(TexEditor);
         centralwidget->setObjectName("centralwidget");
         iViewer = new QGraphicsView(centralwidget);
         iViewer->setObjectName("iViewer");
-        iViewer->setGeometry(QRect(445, 10, 341, 341));
+        iViewer->setGeometry(QRect(10, 20, 512, 512));
         iViewer->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAsNeeded);
-        iViewer->setSizeAdjustPolicy(QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored);
+        iViewer->setSizeAdjustPolicy(QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents);
         frame = new QFrame(centralwidget);
         frame->setObjectName("frame");
-        frame->setGeometry(QRect(449, 360, 331, 131));
+        frame->setGeometry(QRect(530, 10, 261, 391));
         frame->setAutoFillBackground(true);
         frame->setFrameShape(QFrame::Shape::WinPanel);
         frame->setFrameShadow(QFrame::Shadow::Sunken);
         iInfo = new QLabel(frame);
         iInfo->setObjectName("iInfo");
-        iInfo->setGeometry(QRect(10, 10, 311, 111));
+        iInfo->setGeometry(QRect(10, 10, 481, 501));
+        iInfo->setFrameShape(QFrame::Shape::NoFrame);
+        iInfo->setFrameShadow(QFrame::Shadow::Plain);
         iInfo->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
-        progressBar = new QProgressBar(centralwidget);
-        progressBar->setObjectName("progressBar");
-        progressBar->setEnabled(true);
-        progressBar->setGeometry(QRect(457, 530, 321, 23));
-        progressBar->setValue(0);
-        progressBar->setTextVisible(true);
-        progressBar->setInvertedAppearance(false);
-        progressBar->setTextDirection(QProgressBar::Direction::TopToBottom);
+        frame_2 = new QFrame(centralwidget);
+        frame_2->setObjectName("frame_2");
+        frame_2->setGeometry(QRect(530, 410, 261, 121));
+        frame_2->setFrameShape(QFrame::Shape::WinPanel);
+        frame_2->setFrameShadow(QFrame::Shadow::Sunken);
+        frame_2->setLineWidth(1);
+        sTexType = new QComboBox(frame_2);
+        sTexType->setObjectName("sTexType");
+        sTexType->setGeometry(QRect(71, 10, 181, 22));
+        sTexType->setEditable(false);
+        sLabel1 = new QLabel(frame_2);
+        sLabel1->setObjectName("sLabel1");
+        sLabel1->setGeometry(QRect(10, 10, 49, 21));
         TexEditor->setCentralWidget(centralwidget);
         menubar = new QMenuBar(TexEditor);
         menubar->setObjectName("menubar");
@@ -88,6 +100,8 @@ public:
 
         menubar->addAction(menuFile->menuAction());
         menuFile->addAction(actionNew);
+        menuFile->addAction(actionSave_png);
+        menuFile->addSeparator();
         menuFile->addAction(actionOpen);
         menuFile->addAction(actionSave);
 
@@ -98,17 +112,20 @@ public:
 
     void retranslateUi(QMainWindow *TexEditor)
     {
-        TexEditor->setWindowTitle(QCoreApplication::translate("TexEditor", "MainWindow", nullptr));
-        actionNew->setText(QCoreApplication::translate("TexEditor", "New", nullptr));
+        TexEditor->setWindowTitle(QCoreApplication::translate("TexEditor", "Texture Editor", nullptr));
+        actionNew->setText(QCoreApplication::translate("TexEditor", "New (From Image)", nullptr));
 #if QT_CONFIG(tooltip)
         actionNew->setToolTip(QCoreApplication::translate("TexEditor", "New (From Image)", nullptr));
 #endif // QT_CONFIG(tooltip)
-        actionOpen->setText(QCoreApplication::translate("TexEditor", "Open", nullptr));
+        actionOpen->setText(QCoreApplication::translate("TexEditor", "Open (.tex)", nullptr));
 #if QT_CONFIG(tooltip)
         actionOpen->setToolTip(QCoreApplication::translate("TexEditor", "Open (.tex)", nullptr));
 #endif // QT_CONFIG(tooltip)
-        actionSave->setText(QCoreApplication::translate("TexEditor", "Save", nullptr));
-        iInfo->setText(QCoreApplication::translate("TexEditor", ".tex information here", nullptr));
+        actionSave->setText(QCoreApplication::translate("TexEditor", "Save (.tex)", nullptr));
+        actionSave_png->setText(QCoreApplication::translate("TexEditor", "Save (image)", nullptr));
+        iInfo->setText(QCoreApplication::translate("TexEditor", ".tex Information Goes Here", nullptr));
+        sTexType->setCurrentText(QString());
+        sLabel1->setText(QCoreApplication::translate("TexEditor", "Tex Type", nullptr));
         menuFile->setTitle(QCoreApplication::translate("TexEditor", "File", nullptr));
     } // retranslateUi
 

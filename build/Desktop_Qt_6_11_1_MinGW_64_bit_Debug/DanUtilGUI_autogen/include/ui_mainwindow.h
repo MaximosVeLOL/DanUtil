@@ -24,6 +24,7 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QPushButton *mTexEditor;
+    QPushButton *pushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -36,7 +37,11 @@ public:
         centralwidget->setObjectName("centralwidget");
         mTexEditor = new QPushButton(centralwidget);
         mTexEditor->setObjectName("mTexEditor");
-        mTexEditor->setGeometry(QRect(150, 50, 100, 50));
+        mTexEditor->setGeometry(QRect(10, 50, 100, 50));
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName("pushButton");
+        pushButton->setEnabled(false);
+        pushButton->setGeometry(QRect(290, 50, 100, 50));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -53,9 +58,11 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "DanUtil", nullptr));
         mTexEditor->setText(QCoreApplication::translate("MainWindow", "Texture Editor\n"
 "(.tex files)", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Cutscene Editor\n"
+"(.xml files)", nullptr));
     } // retranslateUi
 
 };

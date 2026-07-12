@@ -348,9 +348,15 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/source/DanUtilGUI/error.h",
+			"C:/source/DanUtilGUI/cutsceneeditor.h",
 			"MU",
-			"EWIEGA46WW/moc_error.cpp",
+			"EWIEGA46WW/moc_cutsceneeditor.cpp",
+			null
+		],
+		[
+			"C:/source/DanUtilGUI/danformats.h",
+			"MU",
+			"EWIEGA46WW/moc_danformats.cpp",
 			null
 		],
 		[
@@ -375,7 +381,7 @@
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
 		"QT_NEEDS_QMAIN",
-		"QT_QML_DEBUG",
+		"QT_NO_DEBUG",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -438,6 +444,8 @@
 	"SETTINGS_FILE" : "C:/source/DanUtilGUI/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/CMakeFiles/DanUtilGUI_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "C:/source/DanUtilGUI/cutsceneeditor.cpp", "MU", null ],
+		[ "C:/source/DanUtilGUI/danformats.cpp", "MU", null ],
 		[ "C:/source/DanUtilGUI/main.cpp", "MU", null ],
 		[ "C:/source/DanUtilGUI/mainwindow.cpp", "MU", null ],
 		[ "C:/source/DanUtilGUI/texeditor.cpp", "MU", null ]

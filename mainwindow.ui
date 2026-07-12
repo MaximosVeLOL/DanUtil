@@ -11,13 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>DanUtil</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="mTexEditor">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>10</x>
       <y>50</y>
       <width>100</width>
       <height>50</height>
@@ -26,6 +26,23 @@
     <property name="text">
      <string>Texture Editor
 (.tex files)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>50</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cutscene Editor
+(.xml files)</string>
     </property>
    </widget>
   </widget>
